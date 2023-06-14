@@ -10,7 +10,7 @@ import { Avatar, Box, Container, Typography, useMediaQuery } from "@mui/material
 
 
 
-export default function Mainlider() {
+export default function MainSlider({data}) {
   const isMediumScreen = useMediaQuery("(min-width: 772px)");
   const isCOM2Screen = useMediaQuery("(min-width: 1050px)");
   const isCOM1Screen = useMediaQuery("(min-width: 1250px)");
@@ -21,7 +21,7 @@ export default function Mainlider() {
 
       isMediumScreen ?
         <Box sx={{ backgroundColor: "rgb(248, 251, 245)" }} >
-          <Box sx={{ marginY: "60px", paddingY: "70px" }}>
+          <Box sx={{ marginY: "0px", paddingY: "70px" }}>
 
 
             <Typography variant="h4" component='h4' sx={{ textAlign: "center", marginBottom: "50px", fontWeight: 700, fontSize: "40px" }}>
@@ -66,7 +66,7 @@ export default function Mainlider() {
                         Kcal - {''}
 
                         <Typography variant="body1" component="span" sx={{ textAlign: "center", fontSize: "13px", color: "#80B53B" }} >
-                          {value.Kcal}
+                          {value.kcal}
                         </Typography>
 
 

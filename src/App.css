@@ -3,5 +3,14 @@
 }
 
 body{
-  font-family: 'Montserrat', sans-serif;;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("https://toneopeats.com/public/img/bgpatern.webp");
  }
+ .customTabSelected {
+  /* Add your desired background color for the selected tab */
+  background-color: yellow;
+}
+.customTab {
+  /* Add your desired color for the selected tab */
+  color: red;
+}

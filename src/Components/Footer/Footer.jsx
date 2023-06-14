@@ -10,6 +10,7 @@ const Footer = () => {
     <Box
     sx={{
      backgroundColor:"#f8fbf5",
+     
       // height:"500px",
       // border:"1px solid red"
      
@@ -43,17 +44,19 @@ const Footer = () => {
     <Box
     sx={{
     
-      height:"160px",
+      // height:"160px",
       display:"flex",
       alignItems:"center",
-      justifyContent:"space-around"
+      justifyContent:"space-around",
+      flexDirection:["column","column","row"]
     }}
     >
 
 <Box
 sx={{
-  width:"25%",
-  height:"100px",
+  width:["80%","50%","25%"],
+  mt:2
+  // height:"100px",
  
 }}
 >
@@ -63,8 +66,8 @@ sx={{
 
 <Box
 sx={{
-  width:"25%",
-  height:"100px",
+  width:["80%","50%","25%"],mt:2
+  // height:"100px",
  
 }}
 >
@@ -74,8 +77,8 @@ sx={{
 
 <Box
 sx={{
-  width:"25%",
-  height:"100px",
+  width:["80%","50%","25%"],mt:2
+  // height:"100px",
  
 }}
 >
