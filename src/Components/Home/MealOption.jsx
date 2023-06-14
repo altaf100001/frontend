@@ -27,10 +27,8 @@ const MealOption = ({value}) => {
 
 
     useEffect(() => {
-
         let data
         if ((veg && !Nveg) || (!veg && !Nveg)) {
-
             data = value.filter(v => v.type === "veg")
         } else if (!veg && Nveg) {
             data = value.filter(v => v.type === "nonVeg")
@@ -40,7 +38,7 @@ const MealOption = ({value}) => {
         setData(data);
 
 
-    }, [lunch, dinner, veg, Nveg])
+    }, [lunch, dinner, veg, Nveg,value])
 
     return (
         <Box
@@ -246,7 +244,7 @@ inkBarStyle={{background: 'red'}} sx={{ borderColor: "#80b53b" }} value={value} 
                         dinner ? (
 
 
-                            <Tab sx={{ minWidth: `${dinner ? "50%" : "100%"}`,fontSize:25, borderColor: "#80b53b",textTransform:"capitalize",fontWeight:600 }} label="Dinner" />
+                            <Tab sx={{ minWidth: `${lunch ? "50%" : "100%"}`,fontSize:25, borderColor: "#80b53b",textTransform:"capitalize",fontWeight:600 }} label="Dinner Packages" />
                         )
                             : null
 

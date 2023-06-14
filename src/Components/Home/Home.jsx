@@ -36,11 +36,6 @@ useEffect(() => {
 }, [])
 
 
-
-console.log(data,"data")
-
-
-
   return (
     <Box>
       <Header/>
