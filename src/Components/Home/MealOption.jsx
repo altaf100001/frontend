@@ -172,18 +172,18 @@ export function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 2, borderColor: '#8f8f8f' }}>
-        <Tabs sx={{ borderColor:"#80b53b"}} value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab sx={{ minWidth: '50%' ,borderColor:"#80b53b"}} label="Item One" {...a11yProps(0)} />
-          <Tab sx={{ minWidth: '50%' }} label="Item Two" {...a11yProps(1)} />
+        <Tabs   textColor="secondary"  indicatorColor="secondary" sx={{ borderColor:"#80b53b"}} value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab sx={{ minWidth: '50%' ,borderColor:"#80b53b"}} label="Lunch" {...a11yProps(0)} />
+          <Tab sx={{ minWidth: '50%' }} label="Dinner" {...a11yProps(1)} />
         </Tabs>
       </Box>
 
       <TabPanel value={value} index={0}>
-        Item One
+        Lunch 
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-        Item Two
+      Dinner
       </TabPanel>
     </Box>
   );
