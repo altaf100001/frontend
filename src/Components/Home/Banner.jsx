@@ -84,7 +84,7 @@ sx={{
     // border:"2px solid red"
 }}
 >
-    <img  style={{height:560,width:"100%"}} src="https://toneopeats.com/public/img/bannerimg.webp" alt="" />
+    <img  style={{height:"auto",width:"100%"}} src="https://toneopeats.com/public/img/bannerimg.webp" alt="" />
 </Box>
 
 
