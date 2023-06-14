@@ -46,7 +46,7 @@ const MealOption = ({value}) => {
         <Box
             sx={{
                 // border:"1px solid red",
-                backgroundColor="white",
+                backgroundColor:"white",
                 // height:"500px",
            boxShadow:"0px 6px 12px rgb(0 0 0 / 6%)",
                 width: "80%",
