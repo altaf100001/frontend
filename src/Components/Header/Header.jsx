@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <>
+  
       <Box
         sx={{
           height: 66,
@@ -17,6 +17,11 @@ const Header = () => {
           pr: 5,
           boxSizing: "border-box",
           boxShadow: "0px 2px 10px rgb(0 0 0 / 5%)",
+          position:"sticky",
+          top:"0px",
+          // border:"1px solid blue",
+          zIndex:100,
+          backgroundColor:"#ffffff"
         }}
       >
         <img
@@ -35,7 +40,7 @@ const Header = () => {
         >
           <Link
             to={"/"}
-            style={{ textDecoration: "none", marginRight: "10px" }}
+            style={{ textDecoration: "none", marginRight: "15px" }}
           >
             {" "}
             <Typography
@@ -70,7 +75,7 @@ const Header = () => {
 
         <img src="https://toneopeats.com/public/img/iconmenu.svg" alt="logo" />
       </Box>
-    </>
+  
   );
 };
 

@@ -1,13 +1,18 @@
 import React from 'react'
 import { Box } from '@mui/system';
 import { Typography } from '@mui/material';
-
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 const Footer = () => {
   return (
     <Box
     sx={{
+     backgroundColor:"#f8fbf5",
+      // height:"500px",
+      // border:"1px solid red"
      
-      height:"500px"
     }}
     >
 
@@ -92,15 +97,123 @@ sx={{
 
     <Box
     sx={{
-      border:"1px solid pink",
-      height:"160px"
+      borderTop:"0.5px solid #b5bfa7",
+      height:"160px",
+      display:"flex",
+      alignItems:'center',
+      justifyContent:"center",
+      flexDirection:"column"
     }}
     >
-
+<Box
+sx={{
+  display:"flex",
   
+}}
+>
+
+
+  <Box
+  sx={{
+    border:"1px solid #b5bfa7",
+    borderRadius:"50%",
+    height:40,
+    width:40,
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    "&:hover": {
+      backgroundColor: "#80b53b",
+      border:"0px ",
+    },
+    margin:"0px 11px"
+  }}
+  >
+  <InstagramIcon sx={{color:"#b5bfa7",  height:20,width:20,"&:hover": {
+    color: "white",
+      border:"0px ",
+    }, }}   />
+  </Box>
+
+
+ <Box
+  sx={{
+    border:"1px solid #b5bfa7",
+    borderRadius:"50%",
+    height:40,
+    width:40,
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    "&:hover": {
+      backgroundColor: "#80b53b",
+      border:"0px ",
+    },
+    margin:"0px 11px"
+  }}
+  >
+  <FacebookIcon sx={{color:"#b5bfa7",  height:20,width:20,"&:hover": {
+    color: "white",
+      border:"0px ",
+    }, }}   />
+  </Box>
+
+
+  <Box
+  sx={{
+    border:"1px solid #b5bfa7",
+    borderRadius:"50%",
+    height:40,
+    width:40,
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    "&:hover": {
+      backgroundColor: "#80b53b",
+      border:"0px ",
+    },
+    margin:"0px 11px"
+  }}
+  >
+  <TwitterIcon sx={{color:"#b5bfa7",  height:20,width:20,"&:hover": {
+    color: "white",
+      border:"0px ",
+    }, }}   />
+  </Box>
+
+  <Box
+  sx={{
+    border:"1px solid #b5bfa7",
+    borderRadius:"50%",
+    height:40,
+    width:40,
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    "&:hover": {
+      backgroundColor: "#80b53b",
+      border:"0px ",
+    },
+    margin:"0px 11px"
+  }}
+  >
+  <YouTubeIcon sx={{color:"#b5bfa7",  height:20,width:20,"&:hover": {
+    color: "white",
+      border:"0px ",
+    }, }}   />
+  </Box>
+
+</Box>
+  
+  <Typography variant="caption" mt={3} fontSize={14} color="#3a3a3a" >© Copyright All rights reserved by TONEOPEATS</Typography>
+
     </Box>
 
   
+
+
+
+
     </Box>
   )
 }
