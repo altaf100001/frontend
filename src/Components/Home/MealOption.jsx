@@ -8,7 +8,7 @@ import Food from './Food';
 import Banner from './Banner';
 
 
-const MealOption = ({value}) => {
+const MealOption = ({setValue}) => {
 
     const [veg, setVeg] = useState(false)
     const [Nveg, setNVeg] = useState(false)
@@ -26,19 +26,28 @@ const MealOption = ({value}) => {
     }, [lunch, dinner, veg, Nveg])
 
 
-    useEffect(() => {
-        let data
-        if ((veg && !Nveg) || (!veg && !Nveg)) {
-            data = value.filter(v => v.type === "veg")
-        } else if (!veg && Nveg) {
-            data = value.filter(v => v.type === "nonVeg")
-        } else if (veg && Nveg) {
-            data = value
-        }
-        setData(data);
+    // useEffect(() => {
+    //     let data
+    //     if ((veg && !Nveg) || (!veg && !Nveg)) {
+    //         data = value.filter(v => v.type === "veg")
+    //     } else if (!veg && Nveg) {
+    //         data = value.filter(v => v.type === "nonVeg")
+    //     } else if (veg && Nveg) {
+    //         data = value
+    //     }
+    //     setData(data);
 
 
-    }, [lunch, dinner, veg, Nveg,value])
+    // }, [lunch, dinner, veg, Nveg,value])
+
+
+    function handlChange(type){
+
+        setValue(type)
+
+    }
+
+
 
     return (
         <Box
@@ -128,8 +137,8 @@ const MealOption = ({value}) => {
                         }}
                     >
                         <Typography fontSize={16} fontWeight={600} color="#3a3a3a" >Diet Preference<span style={{ color: "red" }} >*</span></Typography>
-                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${veg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${veg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={() => setVeg(!veg)}    >Veg</Button>
-                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${Nveg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${Nveg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={() => setNVeg(!Nveg)}  >Non-Veg</Button>
+                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${veg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${veg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={()=>handlChange("veg")}   >Veg</Button>
+                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${Nveg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${Nveg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={()=>handlChange("nonVeg")}   >Non-Veg</Button>
                     </Box>
 
 
