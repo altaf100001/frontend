@@ -14,16 +14,18 @@ const Home = () => {
 
   const [data,setData] = useState([])
 
-  const [value ,setValue] = useState("")
+  
 
- async function GetDishes ({value}){
+  const [typeFood ,setTypeFood] = useState("")
 
+ async function GetDishes (value=""){
+console.log(value,"value value")
   try{
 
 const responce = await axios.post(`https://toneopeats-backend.vercel.app/dishes`,{
-  body :{
+ 
     value:value
-  }
+  
 })
 
 if(!responce.data.error)
@@ -34,12 +36,19 @@ setData(responce.data.data)
  }
 }
 
-useEffect(() => {
-  GetDishes(value)
 
+useEffect(()=>{
+  GetDishes(typeFood)
+},[typeFood])
+
+
+function handlChange(type){
+  console.log(type,"type ")
+  setTypeFood(type)
  
-}, [value])
 
+  // GetDishes(type)
+      }
 
   return (
     <Box>
@@ -47,7 +56,7 @@ useEffect(() => {
      
       <MainSlider data={data} />
       <Banner/>
-      <MealOption setValue={setValue}/>
+      <MealOption data={data} handlChange={handlChange}/>
       <Testimonial/>
       <Footer/>
     </Box>

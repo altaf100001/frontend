@@ -8,22 +8,22 @@ import Food from './Food';
 import Banner from './Banner';
 
 
-const MealOption = ({setValue}) => {
+const MealOption = ({handlChange,data}) => {
 
     const [veg, setVeg] = useState(false)
     const [Nveg, setNVeg] = useState(false)
     const [lunch, setlunch] = useState(false)
     const [dinner, setdinner] = useState(true)
-    const [data, setData] = useState([])
-    useEffect(() => {
-        if (!lunch && !dinner) {
-            setdinner(true)
-        }
-        // if (!veg && !Nveg) {
-        //     setVeg(true)
-        // }
+    // const [data, setData] = useState([])
+    // useEffect(() => {
+    //     if (!lunch && !dinner) {
+    //         setdinner(true)
+    //     }
+    //     // if (!veg && !Nveg) {
+    //     //     setVeg(true)
+    //     // }
 
-    }, [lunch, dinner, veg, Nveg])
+    // }, [lunch, dinner, veg, Nveg])
 
 
     // useEffect(() => {
@@ -40,12 +40,28 @@ const MealOption = ({setValue}) => {
 
     // }, [lunch, dinner, veg, Nveg,value])
 
+const handleClick = () =>{
+  
+   
 
-    function handlChange(type){
+    setVeg(!veg)
+   
+}
+const handleClick2 = () =>{
+   
 
-        setValue(type)
+    setNVeg(!Nveg)
+   
+}
 
-    }
+useEffect(() =>{
+    handlChange(veg?"veg":"" ||Nveg?"nonVeg":"" )
+},[veg])
+
+useEffect(() =>{
+    handlChange(Nveg?"nonVeg":""||veg?"veg":"" )
+},[Nveg])
+  
 
 
 
@@ -137,8 +153,8 @@ const MealOption = ({setValue}) => {
                         }}
                     >
                         <Typography fontSize={16} fontWeight={600} color="#3a3a3a" >Diet Preference<span style={{ color: "red" }} >*</span></Typography>
-                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${veg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${veg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={()=>handlChange("veg")}   >Veg</Button>
-                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${Nveg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${Nveg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={()=>handlChange("nonVeg")}   >Non-Veg</Button>
+                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${veg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${veg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={handleClick}   >Veg</Button>
+                        <Button sx={{ border: "0.5px solid #e8eee0", mt: 1, mr: 3, color: `${Nveg ? "white" : "black"}`, fontSize: 13, backgroundColor: `${Nveg ? "#80B53B" : "white"}`, height: 29, width: 110, '&:hover': { color: "black" } }} onClick={handleClick2}   >Non-Veg</Button>
                     </Box>
 
 
