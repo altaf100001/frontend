@@ -55,11 +55,11 @@ const handleClick2 = () =>{
 }
 
 useEffect(() =>{
-    handlChange(veg?"veg":"" ||Nveg?"nonVeg":"" )
+    handlChange(veg?"veg":"" ||Nveg?"nonVeg":"" && veg && Nveg ?"":"" )
 },[veg])
 
 useEffect(() =>{
-    handlChange(Nveg?"nonVeg":""||veg?"veg":"" )
+    handlChange(Nveg?"nonVeg":""||veg?"veg":"" && veg && Nveg ?"":""  )
 },[Nveg])
   
 
